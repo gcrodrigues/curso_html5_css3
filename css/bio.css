@@ -1,0 +1,102 @@
+.citacoes {
+    width: 30ch;
+    margin: 1em 2em;
+    background-color: #d9e5e3;
+    border: .5em solid #c2ccca;
+    box-sizing: border-box;
+    padding: 1em;
+    position: relative;
+    transition: box-shadow 1s, transform 1s;
+    transition-delay: 0s, 1s;
+  }
+  
+  .citacoes p{
+    position: relative;
+  }
+  cite{
+    float: right;
+    font-style: italic; 
+  }
+
+  .citacoes:nth-of-type(even){
+    float:left;
+  }
+
+  .citacoes:nth-of-type(odd){
+    float:right;
+  }
+
+  .citacoes:hover,
+  .citacoes:focus{
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.8);
+    transition-delay: 1s, 0s;
+  }
+
+  .citacoes:nth-of-type(even):hover,
+  .citacoes:nth-of-type(even):focus{
+    transform: scale(1.2) rotate(-5deg);
+    z-index:1000;
+  }
+
+  .citacoes:nth-of-type(odd):hover,
+  .citacoes:nth-of-type(odd):focus{
+    transform: scale(1.2) rotate(5deg);
+    z-index:1001;
+  }  
+
+  .citacoes::before{
+    content: '“';
+    font-size: 10em;
+    color: #bbb;
+    position: absolute;
+    line-height: .8em;
+  }
+
+  .container > p::first-letter{
+      font-size: 200%;
+      text-shadow:1px 1px 0 black;
+      font-weight: bold;
+      color:#3c1d3d;
+      margin-right: .2ch;
+      line-height: 1;
+  }
+
+  tr > td,
+  tr > th{
+    padding: 1em;
+  }
+
+  .habilidades {
+    background-color: #851944;
+    color: #f2fffc;
+    font-weight: bold;
+  }
+
+  .habilidades ~ td{
+    background-color: #eee;
+  }
+
+   thead > tr:nth-child(n+1){
+     background-color: #3c1d3d;
+     color:#f2fffc;
+     font-weight: bold;
+   }
+  .tabela-experiencias{
+    margin: 1em 0;
+    border-collapse: separate;
+    border-spacing: .25em;
+  }
+
+    .tdcomposto{
+      vertical-align: middle;
+      text-align: center;
+      font-style: italic;
+    }
+  /*.fiat{
+    float: right;    
+  }
+  
+  .petrobras{
+    float: left;
+  }*/
+

@@ -1,0 +1,318 @@
+html,
+body{
+    overflow-x: hidden;
+    height:100%;
+}
+body{
+    perspective-origin: 50% 180px;
+    perspective: 6px;
+    display: block;
+}
+.foto-home {
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 1em #000;
+}
+.palavras-home, .titulo-principal {
+    transform-style: preserve-3d;
+}
+header{
+    position: relative;
+}
+.palavras-home{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.banner-twitter{ 
+    border: #000 solid .25em;
+    background-color: #3c1d3d;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    width: 14em;
+    line-height: 1;
+
+    padding: 1em 0;
+    box-sizing: border-box;
+    position: absolute;
+    
+    font-size: 1em;
+    font-family: "Open Sans Condensed", sans-serif;
+
+    top: 0;
+    right: 0;
+    transform-origin: 0 0;
+    transform: translate(calc(.707*(3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg) ;
+    animation: aparece .5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+.saudacao p {
+    font-size: 1.5em;
+    color: #99A;
+    line-height: 1;
+    padding: 2em;
+}
+
+p.saudacao:hover em{
+    animation-play-state: paused;
+}
+
+.saudacao-inicio {
+    font-size: 3em;
+    color: #889;
+}
+.saudacao-ultima-linha {
+    text-align: right;
+    display: block;
+}
+.saudacao strong {
+    font-size: 2em;
+    color: #000;
+}
+.saudacao em {
+    font-size: 4em;
+    color: #851944;
+    display: inline-block;
+    transform: rotate(-5deg) skew(-10deg);
+    animation: flutua 1s infinite;
+    animation-timing-function: ease-in-out;
+    position: relative;
+    animation-direction: alternate;
+}
+
+@keyframes flutua{
+    from{
+        top:-5px;
+    }
+    to{
+        top:5px;
+    }
+}
+
+.botao-index {
+    font-size: 1.25em;
+    margin: 2em auto;
+    background-color: #851944;
+    color: #FFF;
+    border: .2em solid black;
+    width: 40ch;
+    display: block;
+    text-align: center;
+    padding: .5em;
+    box-shadow: 0 0 1em #000/*, inset 0 0 .5em #fff*/;
+    text-decoration: none;
+    transition: box-shadow .5s, background-color .5s;
+}
+
+.botao-index:hover,
+.botao-index:focus{
+    box-shadow: 0 0 1em #FA9; 
+    color:#fff;
+    background-color: #C54974;
+}
+
+.secao-inicio{
+    padding: 2em;
+}
+.secao-inicio h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    text-shadow: 5px 5px black;
+    margin-bottom: .5em;
+}
+.trabalhos {
+    background-color: #3C1D3D;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 14px, transparent 14px, transparent 15px, rgba(0, 0, 0, 0.1) 15px, rgba(0, 0, 0, 0.1));
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+.trabalhos h2 {
+    color: #FFF;
+}
+.trabalhos ul {
+    display: flex;
+}
+
+.trabalhos li:first-child{
+    order: 2;
+    transform: scale(1.2);
+}
+
+.trabalhos li:nth-child(2){
+    order: 1;
+}
+
+.trabalhos li:last-child{
+    order: 3;
+}
+
+.trabalhos li {
+    flex: 1;
+    border: 10px solid black;
+}
+.trabalhos img {
+    width: 100%;
+    display: block;
+}
+.blog {
+    background-color: #999;
+    color: #FFF;
+    border-bottom: 10px solid #851944;
+    position: relative;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 14px, transparent 14px, transparent 15px, rgba(255, 255, 255, 0.1) 15px, rgba(255, 255, 255, 0.1));
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+.blog small{
+    position: relative;
+    top:-2em;
+}
+.blog li{
+    width: 30%;
+}
+.blog li a {
+    color: #FCF;
+    padding: .5em;
+    display: block;
+}
+.blog .inicio-post{
+    background-color:#f2fffc;
+    color: #000;
+    position: absolute;
+    top:4em;
+    left:30%;
+    right: 4em;
+    height: 9em;
+    padding: 1.5em;
+    display: none;
+}
+
+.blog a:hover + .inicio-post,
+.blog a:focus + .inicio-post{
+    display: block;
+}
+
+.blog li a:hover,
+.blog li a:focus{
+    background-color: #f2fffc;
+    color: #F26;
+}
+
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding: 2em;
+}
+footer h2{
+    font-size: 3em;
+}
+footer a {
+    color: #F99;
+}
+main {
+    width: 100%;
+    padding-bottom: 0;
+    float: none;
+}
+
+.palavra-home{
+    position: absolute;
+    font-family: "Shadows Into Light", sans-serif;
+    font-weight: bold;
+    color: rgba(255, 127, 127, 0.5);
+    animation: aparece 3s;
+}
+
+@keyframes aparece{
+    from{
+        opacity: 0;
+        transform: scale(.001em);
+    }
+}
+
+.palavras-home li{
+    font-size: 400%;
+}
+.eficiencia {
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(4px) scale(0.25);
+    opacity: .9;
+}
+
+.boas-praticas {
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(1px) scale(0.25);
+    opacity: .3;
+}
+
+.codigo-limpo {
+    top: 45%;
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(-10deg) translateZ(2px) scale(0.25);
+    opacity: .5;
+}
+
+.css3 {
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%, -50%) rotate(5deg) translateZ(2px) scale(0.25);
+    opacity: .6;
+}
+
+.html5 {
+    top: 30%;
+    left: 65%;
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(0.25);
+    opacity: .6;
+}
+
+.javascript {
+    top: 15%;
+    left: 60%;
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(1px) scale(0.25);
+    opacity: .4;
+}
+
+.acessibilidade {
+    top: 30%;
+    left: 35%;
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(3px) scale(0.25);
+    opacity: .7;
+}
+
+.responsivo {
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(3px) scale(0.25);
+    opacity: .6;    
+}
+
+.otimizacoes {
+    top: 70%;
+    left: 65%;
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(2px) scale(0.25);
+    opacity: .3;
+}
+
+.agilidade {
+    top: 75%;
+    left: 35%;
+    transform: translate(-50%, -50%) rotate(5deg) translateZ(1px) scale(0.25);
+    opacity: .2;
+}
+
+.design {
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(0.25);
+    opacity: .2;
+}

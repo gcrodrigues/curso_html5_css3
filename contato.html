@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato - João da Silva</title>
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
+<body>
+    <main>
+        <h1 class="titulo-principal">Contato</h1>
+        <div class="container">
+            <form>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome" class="dados-pessoais">Nome</label>
+                    <input type="text" name="nome" id="nome" pattern="[A-z '\u00C0-\u017e]{4,}*" autofocus required title="O nome precisa ter pelo menos 4 caracteres" >
+                    <label for="email" class="dados-pessoais">E-mail</label>
+                    <input type="email" name="e-mail" id="email" placeholder="seu_email@exemplo.com" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Assunto</legend>
+                    <input type="radio" name="assunto" id="blog" value="Blog">
+                    <label for="blog">Blog</label>
+                    <input type="radio" name="assunto" id="servico" value="Serviço">
+                    <label for="servico">Serviço</label>
+                    <fieldset>
+                        <input type="radio" name="assunto" id="outro" value="Outro">
+                        <label for="outro">Outro</label>
+                        <input type="text" name="outro-assunto">
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <label for="msg">Mensagem</label>
+                    <textarea name="mensagem" id="msg" cols="60" rows="10" placeholder="Digite sua mensagem" ></textarea>
+                </fieldset>
+                <button type="submit">Enviar mensagem</button>
+            </form>    
+        </div>
+    </main>    
+    <img class="minha-foto" src="imagens/eu.jpg" alt="Foto de João da Silva">
+    <aside class="navegacao-site">
+        <h1>João da Silva</h1> 
+        <nav>       
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+
+                <li> <a href="portfolio.html">Portfolio</a></li>
+                
+                <li> <a href="bio.html">Sobre mim</a></li>
+                
+                <li> <a href="blog.html">Blog</a></li>
+                
+                <li> <a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <ul class="icones-redes-sociais">
+            <li><a class="github" data-tooltip="Veja meus projetos opensource" href="http://www.github.com/joaodasilva">Github</a></li>
+            <li><a class="twitter"  data-tooltip="Siga-me no Twitter" href="http://www.twitter.com/joaodasilva">Twitter</a></li>
+            <li><a class="linkedin"  data-tooltip="Veja meu currículo" href="http://www.linkedin.com/pub/linkedin-joao-da-silva/32/4/508">LinkedIn</a></li>
+        </ul>   
+    </aside>    
+    <footer id="rodape-pagina">&copy; João da Silva 2014</footer>
+</body>
+</html>

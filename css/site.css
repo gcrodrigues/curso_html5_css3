@@ -1,0 +1,185 @@
+html{
+  font-size: 120%;
+}
+
+body {
+  font-family: "Crimson Text", serif;
+  background-color: #f2fffc;
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1,
+h2,
+.subtitulo-principal {
+  font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+h1{
+  text-transform: uppercase;
+  font-size: 3em;
+  text-shadow: 5px 5px #000;
+}
+
+.titulo-principal {
+  background-color: #851944;
+  color: #fff;
+  text-align: center;
+  padding: 2rem; /*medida com base na medida padrao do navegador*/
+  border-bottom: .5rem solid black;
+}
+
+.subtitulo-texto {
+  font-size: 1.5em;
+  clear: both; /*não permite um float ao lado do elemento*/
+}
+
+.container {
+  width: 80ch;
+  margin-left: auto; /*centralizando o texto */
+  margin-right: auto;
+  padding: 30px 0;
+  padding-bottom:80px;
+}
+
+main{
+    width: calc(100% - 0.9 * 300px);
+    padding-bottom: 1.5em;
+    flex-grow: 1;
+}
+
+main a {
+  color: #851944;
+}
+
+main p {
+  text-align: justify;
+  margin: 1em 0; /*espaçamento acima e abaixo dos p */
+}
+
+.navegacao-site {
+  background-color: #3c1d3d;
+  color: #f2fffc;
+  text-align: center;
+  width: calc(0.9 * 300px);
+  padding-top: calc(300px + 1em);
+}
+
+.minha-foto{
+  border-bottom: #000 solid .5em;
+}
+
+.navegacao-site, 
+.minha-foto{
+    box-sizing: border-box;
+    border-left: #000 solid .5em;
+}
+
+.navegacao-site h1 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.navegacao-site a {
+  color: inherit;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: lowercase;
+}
+
+.navegacao-site a:hover,
+.navegacao-site a:focus{
+  text-shadow: 0 0 2px pink;
+}
+
+.navegacao-site ul {
+  list-style-type: none;
+}
+
+.minha-foto{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 300px;
+}
+
+.icones-redes-sociais a{
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px; /*espaçamento antes da primeira linha de texto -- IMAGE REPLACEMENT*/
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  top:100%;
+  right: 0;
+  width:300%;
+  text-indent: 0;
+  font-size: .75em;
+  border-radius: 5px;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before{
+  content:'';
+  height: 1em;
+  width: 1em;
+  background-color: #000;
+  position: absolute;
+  bottom:0;
+  left:0;
+  transform:translateY(.5em) translateX(.5em) rotate(45deg); 
+}
+
+.github {
+  background-image: url(../imagens/github.png);
+}
+
+.twitter {
+  background-image: url(../imagens/twitter.png);
+}
+
+.linkedin{
+  background-image: url(../imagens/linkedin.png);
+}
+
+.icones-redes-sociais li {
+  display: inline-block;
+
+}
+
+#rodape-pagina {
+  background-image: radial-gradient(ellipse at left bottom, rgba(60, 29, 61, 0.8),rgba(60, 29, 61, 0.8) 65%, black 65%, black 70%, transparent 70%, transparent);
+  background-size: 25% 100%;
+  background-repeat: no-repeat;
+  color: #f2fffc;
+  text-shadow:1px 1px 1px #000; 
+  padding: 1em;
+  clear: both; /*clearfix*/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus{
+  color:red;
+}
